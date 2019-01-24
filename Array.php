@@ -60,8 +60,8 @@ echo 'Random element selected to be removed: '. $array[$removeIndex]. PHP_EOL;
 //remove the selected element from array
 unset($array[$removeIndex]);
 
-for ($i=0; $i<500; $i++){
-    if (!isset($array[$i])){
+for ($i=0; $i<500; $i++){ //Efficiency cost: O(n)
+    if (!isset($array[$i])){ //Efficiency cost: O(n)
         $elementMissing = $array[$i-1]+1;
         break;
     }
@@ -69,14 +69,14 @@ for ($i=0; $i<500; $i++){
 
 echo 'Missing element found by the Algo: ' . $elementMissing . PHP_EOL;
 echo PHP_EOL;
-//Total Efficiency cost: O(n)
+//Total Efficiency cost: O(nˆ2)
 
 
 
 /**
  * Another way would be using array_diff() and
  * get the missing elements between two arrays
- * I guess the cost of it would be O(2n), 
+ * The cost of it is O(π param_i_size, for all i), 
  * to confirm it I have to install the php extension "vld" in order to
  * see the iterations in low-level and do the proper comparison
  * 
