@@ -76,7 +76,7 @@ echo PHP_EOL;
 /**
  * Another way would be using array_diff() and
  * get the missing elements between two arrays
- * I guess the cost of it would be O(2n) or O(nˆ2), 
+ * I guess the cost of it would be O(2n), 
  * to confirm it I have to install the php extension "vld" in order to
  * see the iterations in low-level and do the proper comparison
  * 
